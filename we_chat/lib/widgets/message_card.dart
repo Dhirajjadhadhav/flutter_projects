@@ -29,7 +29,6 @@ class _MessageCardState extends State<MessageCard> {
     //update last read message is sender and receiver are different
     if (widget.message.read.isEmpty) {
       APIs.UpdateMessageReadStatus(widget.message);
-      log("Message read updated ");
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,

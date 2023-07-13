@@ -79,7 +79,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       //profile picture
                       _image != null
                           ?
-
                           //local image
                           ClipRRect(
                               borderRadius:

@@ -14,8 +14,11 @@ class MyDateUtil {
     final DateTime send = DateTime.fromMillisecondsSinceEpoch(int.parse(time));
     final DateTime now = DateTime.now();
 
-    if (now.day == send.day && now.month == send.month && now.year == send.year)
+    if (now.day == send.day &&
+        now.month == send.month &&
+        now.year == send.year) {
       return TimeOfDay.fromDateTime(send).format(context);
+    }
 
     return '${send.day} ${_getMonth(send)}';
   }

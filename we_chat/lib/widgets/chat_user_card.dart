@@ -1,4 +1,4 @@
-import 'package:firebase_storage/firebase_storage.dart';
+import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:we_chat/api/apis.dart';
@@ -44,6 +44,7 @@ class _CharUserCardState extends State<CharUserCard> {
                     data?.map((e) => Message.fromJson(e.data())).toList() ?? [];
                 if (list.isNotEmpty) {
                   _message = list[0];
+                  log(list[0].msg);
                 }
                 return ListTile(
                   //user profile picture

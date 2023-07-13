@@ -210,7 +210,10 @@ class _ChatScreenState extends State<ChatScreen> {
                     maxLines: null,
                     onTap: () {
                       setState(() {
-                        _showEmoji = !_showEmoji;
+                        if (_showEmoji)
+                          setState(() {
+                            _showEmoji = !_showEmoji;
+                          });
                       });
                     },
                     decoration: InputDecoration(
