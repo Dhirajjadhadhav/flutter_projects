@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
-import './home_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import './screens/base_screen.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        scaffoldBackgroundColor: Colors.white,
-      ),
       debugShowCheckedModeBanner: false,
-      home: HomeWidget(),
+      title: "Flutter Live code Bank App",
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        fontFamily: "poppins",
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
+        primarySwatch: Colors.blue,
+      ),
+      home: BaseScreen(),
     );
   }
 }
